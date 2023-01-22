@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["debian-openssl-1.1.x"]
+}
+
+generator erd {
+  provider = "prisma-erd-generator"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Habit {
+  id         Int             @id @default(autoincrement())
+  title      String
+  created_at DateTime
+  weekDays   HabitWeekDays[]
+  habit      DayHabit[]
+
+  @@map("habits")
+}
+
+model HabitWeekDays {
+  id       Int @id @default(autoincrement())
+  habit_id Int
+  week_day Int
+
+  habit Habit @relation(fields: [habit_id], references: [id])
+
+  @@unique([habit_id, week_day])
+  @@map("habit_week_days")
+}
+
+model Day {
+  id   Int      @id @default(autoincrement())
+  date DateTime
+
+  habits DayHabit[]
+
+  @@unique([date])
+  @@map("days")
+}
+
+model DayHabit {
+  day_id   Int
+  habit_id Int
+
+  habit Habit @relation(fields: [habit_id], references: [id])
+  day   Day   @relation(fields: [day_id], references: [id])
+
+  @@id([day_id, habit_id])
+  @@map("day_habits")
+}
