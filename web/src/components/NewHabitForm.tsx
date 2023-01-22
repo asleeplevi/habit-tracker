@@ -51,7 +51,7 @@ export const NewHabitForm = () => {
           <Translator path="home.header.form.inputTitle" />
         </label>
 
-        {createWeekDays(i18n.language as any).map((day, index) => (
+        {createWeekDays().map((day, index) => (
           <Checkbox.Root
             key={day}
             className="flex items-center gap-3 group focus:outline-none"
