@@ -42,12 +42,18 @@ export const SummaryTable = () => {
 
   return (
     <section className="flex flex-col">
-      <div className="grid grid-cols-[20px_100px_20px] ml-auto mb-4">
-        <button onClick={() => handleChangeMonth(-1)}>
+      <div className="grid grid-cols-[20px_100px_20px] ml-auto mb-4 items-center">
+        <button
+          className="outline-custom w-4 h-4 rounded"
+          onClick={() => handleChangeMonth(-1)}
+        >
           <ArrowLeft />
         </button>
         <span className="text-center">{capitalize(currentMonth)}</span>
-        <button onClick={() => handleChangeMonth(1)}>
+        <button
+          className="outline-custom w-4 h-4 rounded"
+          onClick={() => handleChangeMonth(1)}
+        >
           <ArrowRight />
         </button>
       </div>

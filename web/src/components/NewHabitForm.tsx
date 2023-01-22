@@ -42,7 +42,7 @@ export const NewHabitForm = () => {
         id="title"
         placeholder={translator("home.header.form.placeholder")}
         autoFocus
-        className="p-4 rounded-lg mt-2 bg-zinc-800 text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-background"
+        className="p-4 rounded-lg mt-2 bg-zinc-800 text-white placeholder:text-zinc-400 outline-custom"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
@@ -69,7 +69,7 @@ export const NewHabitForm = () => {
       </div>
       <button
         type="submit"
-        className="mt-6 rounded-lg p-4 gap-3 flex justify-center items-center font-semibold bg-green-600 hover:bg-green-500 transition-colors focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-background"
+        className="mt-6 rounded-lg p-4 gap-3 flex justify-center items-center font-semibold bg-green-600 hover:bg-green-500 transition-colors outline-custom"
       >
         <Check size={20} weight="bold" />
         <Translator path="common.confirm" />

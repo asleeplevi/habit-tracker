@@ -35,7 +35,7 @@ export function Habit({
     <Popover.Root>
       <Popover.Trigger
         className={clsx(
-          "w-10 h-10  border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-background",
+          "w-10 h-10  border-2 rounded-lg transition-colors outline-custom",
           {
             "bg-zinc-900 border-zinc-800": completedPercentage === 0,
             "bg-violet-900 border-violet-700": minMaxPercent(1, 20),
@@ -47,7 +47,7 @@ export function Habit({
         )}
       />
       <Popover.Portal>
-        <Popover.Content className="min-w-[320px] p-6 rounded-2xl bg-zinc-900 flex flex-col group focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-background">
+        <Popover.Content className="min-w-[320px] p-6 rounded-2xl bg-zinc-900 flex flex-col group outline-custom">
           <span className="font-semibold text-zinc-400">{weekDay}</span>
           <span className="mt-1 font-extrabold leading-tight text-3xl">
             {dayjs(date).format("DD/MM")}

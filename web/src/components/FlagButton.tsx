@@ -16,9 +16,12 @@ type FlagButtonProps = {
 export const FlagButton = ({ onClick, language, active }: FlagButtonProps) => {
   return (
     <button
-      className={clsx("h-5 w-5 flex justify-center items-center", {
-        "saturate-0": !active,
-      })}
+      className={clsx(
+        "h-5 w-5 flex justify-center items-center outline-custom rounded-sm",
+        {
+          "saturate-0": !active,
+        }
+      )}
       onClick={onClick}
     >
       <img className="w-full h-full" src={flags[language]} alt="Flag" />
