@@ -47,7 +47,7 @@ export function Habit({
         )}
       />
       <Popover.Portal>
-        <Popover.Content className="min-w-[320px] p-6 rounded-2xl bg-zinc-900 flex flex-col group outline-custom">
+        <Popover.Content className="min-w-[320px] p-6 rounded-2xl bg-zinc-900 flex flex-col outline-custom">
           <span className="font-semibold text-zinc-400">{weekDay}</span>
           <span className="mt-1 font-extrabold leading-tight text-3xl">
             {dayjs(date).format("DD/MM")}
