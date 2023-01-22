@@ -1,11 +1,12 @@
-<h2 align="center">Habit tracker</h2>
+<h1 align="center">Habit tracker</h1>
+<p align="center">
 Projeto desenvolvido durante o evento NLW da rocketseat seguindo a trilha ignite. 
-
+</p>
 
 ![Application cover](./.readme/cover.png)
 
 ## Sobre
-A idéia do projeto é ajudar o usuário na adoção de novos hábitos, registrando seu progresso e disponibilizando uma visualização gráfica. Foi desenvolvido uma api utilizando Fastify + Prisma e um frontend utilizando React + Tailwind.
+A idéia do projeto é ajudar o usuário na adoção de novos hábitos, registrando e disponibilizando uma visualização gráfica do seu progresso. Foi desenvolvido uma api utilizando Fastify + Prisma e um frontend utilizando React + Tailwind.
 
 ## Como rodar
 
